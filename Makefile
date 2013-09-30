@@ -1,15 +1,37 @@
+#
+# Tumblr theme template
+#
+# Makefile
+#
+
+CSSDIR = css
+LESSDIR = less
+HTMLDIR = html
+OUTDIR = out
 
 css = style.css
-theme = theme.html
+out = theme.html
 layout = layout.html
 
-default: $(theme)
+CSS = $(addprefix $(CSSDIR)/, $(css))
+OUT = $(addprefix $(OUTDIR)/, $(out))
+LAYOUT = $(addprefix $(HTMLDIR)/, $(layout))
+HTML = $(shell find -type f -name "*.html" -not -path "./$(OUT)")
 
-%.css: %.less
+.PHONY: all clean
+all: $(OUT)
+
+$(CSSDIR)/%.css: $(LESSDIR)/%.less $(CSSDIR)
 	lessc -x $< > $@
 
-$(theme): $(css)
-	tumblr-theme -o $@ -xv $(layout)
+$(OUT): $(CSS) $(HTML) $(OUTDIR)
+	gpp -o $@ -H \
+		-I $(HTMLDIR) \
+		-I $(CSSDIR) \
+		$(LAYOUT)
+
+$(CSSDIR) $(OUTDIR):
+	mkdir -p $@
 
 clean:
-	$(RM) $(theme) $(css)
+	$(RM) -r $(CSSDIR) $(OUTDIR)
