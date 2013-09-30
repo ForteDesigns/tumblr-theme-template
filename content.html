@@ -1,0 +1,65 @@
+<div id="content">
+	<div id="main">
+		<section id="posts">
+			{block:Posts}
+				<article>
+					<div class="post-wrapper">
+						<section class="post">
+							{block:Text}
+		                        @@posts/text.html@@
+							{/block:Text}
+
+							{block:Photo}
+								@@posts/photo.html@@
+							{/block:Photo}
+
+							{block:Photoset}
+								@@posts/photoset.html@@
+							{/block:Photoset}
+
+							{block:Quote}
+								@@posts/quote.html@@
+							{/block:Quote}
+
+							{block:Link}
+								@@posts/link.html@@
+							{/block:Link}
+
+							{block:Chat}
+								@@posts/chat.html@@
+							{/block:Chat}
+
+							{block:Audio}
+								@@posts/audio.html@@
+							{/block:Audio}
+
+							{block:Video}
+								@@posts/video.html@@
+							{/block:Video}
+
+							{block:Answer}
+								@@posts/answer.html@@
+							{/block:Answer}
+
+							{block:RebloggedFrom}
+								@@rebloged.html@@
+							{/block:RebloggedFrom}
+
+							{block:NotReblog}
+								@@not_reblogged.html@@
+							{/block:NotReblog}
+
+							{block:Date}
+								@@panel.html@@
+							{/block:Date}
+
+							{block:PermalinkPage}
+								@@permalink_page.html@@
+							{/block:PermalinkPage}
+						</section>
+					</div>
+				</article>
+			{/block:Posts}
+		</section>
+	</div>
+</div>

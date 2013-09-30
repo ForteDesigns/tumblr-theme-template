@@ -1,0 +1,16 @@
+{block:HasTags}
+    <section class="attribution-tags clearfix">
+        <ul>
+            {block:ContentSource}
+            <li>
+                <a class="source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
+            </li>
+            {/block:ContentSource}
+            {block:Tags}
+                <li>
+                    <a href="{TagURL}" class="tag">{Tag}</a>
+                </li>
+            {/block:Tags}
+        </ul>
+    </section>
+{/block:HasTags}

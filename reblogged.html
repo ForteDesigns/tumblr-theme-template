@@ -1,0 +1,19 @@
+<section class="attribution-tags clearfix">
+    <ul>
+        <li>
+            <a class="reblog-link" href="{ReblogParentURL}">{ReblogParentName}</a>
+        </li>
+        {block:ContentSource}
+        <li>
+            <a class="source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
+        </li>
+        {/block:ContentSource}
+        {block:HasTags}
+            {block:Tags}
+                <li>
+                    <a href="{TagURL}" class="tag">{Tag}</a>
+                </li>
+            {/block:Tags}
+        {/block:HasTags} 
+    </ul>
+</section>

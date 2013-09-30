@@ -1,0 +1,19 @@
+<section class="panel">
+    <footer class="post-footer">
+        <section class="meta"> 
+            <ul class="post-date">
+                <li>
+                    <a href="{Permalink}" title="{TimeAgo}">{ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}</a>
+                </li>
+                {block:NoteCount}
+                <li> 
+                    <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                </li>
+                {/block:NoteCount}
+            </ul>
+        </section>
+        
+        @@post_controls.html@@
+        
+    </footer>
+</section>

@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		
+
+	</head>
+
+	<body>
+<div id="content">
+	<div id="main">
+		<section id="posts">
+			{block:Posts}
+				<article>
+					<div class="post-wrapper">
+						<section class="post">
+							{block:Text}
+		                        @@posts/text.html@@
+							{/block:Text}
+
+							{block:Photo}
+								@@posts/photo.html@@
+							{/block:Photo}
+
+							{block:Photoset}
+								@@posts/photoset.html@@
+							{/block:Photoset}
+
+							{block:Quote}
+								@@posts/quote.html@@
+							{/block:Quote}
+
+							{block:Link}
+								@@posts/link.html@@
+							{/block:Link}
+
+							{block:Chat}
+								@@posts/chat.html@@
+							{/block:Chat}
+
+							{block:Audio}
+								@@posts/audio.html@@
+							{/block:Audio}
+
+							{block:Video}
+								@@posts/video.html@@
+							{/block:Video}
+
+							{block:Answer}
+								@@posts/answer.html@@
+							{/block:Answer}
+
+							{block:RebloggedFrom}
+								@@rebloged.html@@
+							{/block:RebloggedFrom}
+
+							{block:NotReblog}
+								
+{block:HasTags}
+    <section class="attribution-tags clearfix">
+        <ul>
+            {block:ContentSource}
+            <li>
+                <a class="source-link" href="{SourceURL}">{lang:Source}: {SourceTitle}</a>
+            </li>
+            {/block:ContentSource}
+            {block:Tags}
+                <li>
+                    <a href="{TagURL}" class="tag">{Tag}</a>
+                </li>
+            {/block:Tags}
+        </ul>
+    </section>
+{/block:HasTags}							{/block:NotReblog}
+
+							{block:Date}
+								
+<section class="panel">
+    <footer class="post-footer">
+        <section class="meta"> 
+            <ul class="post-date">
+                <li>
+                    <a href="{Permalink}" title="{TimeAgo}">{ShortMonth} {DayOfMonth}{DayOfMonthSuffix}, {Year}</a>
+                </li>
+                {block:NoteCount}
+                <li> 
+                    <a href="{Permalink}#notes">{NoteCountWithLabel}</a>
+                </li>
+                {/block:NoteCount}
+            </ul>
+        </section>
+        
+        @@post_controls.html@@
+        
+    </footer>
+</section>							{/block:Date}
+
+							{block:PermalinkPage}
+								
+
+{block:PostNotes}
+  <section id="notes" class="notes-wrapper clearfix">
+      {PostNotes-64}
+  </section>
+{/block:PostNotes}
+
+{block:Date}
+
+    {block:IfDisqusShortname}
+      <section class="comments">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+            (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+          <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+      </section>
+    {/block:IfDisqusShortname}
+
+{/block:Date}							{/block:PermalinkPage}
+						</section>
+					</div>
+				</article>
+			{/block:Posts}
+		</section>
+	</div>
+</div>
+
+		<footer>
+
+		</footer>
+	</body>
+</html>
