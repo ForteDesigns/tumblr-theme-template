@@ -1,65 +1,65 @@
 <div id="content">
-	<div id="main">
-		<section id="posts">
-			{block:Posts}
-				<article>
-					<div class="post-wrapper">
-						<section class="post">
-							{block:Text}
-                                <#include "posts/text.html">
-							{/block:Text}
+    <div id="main">
+        <section id="posts">
+            {block:Posts}
+            <article>
+                <div class="post-wrapper">
+                    <section class="post">
+                        {block:Text}
+                        <#include "posts/text.html">
+                        {/block:Text}
 
-							{block:Photo}
-                                <#include "posts/photo.html">
-							{/block:Photo}
+                        {block:Photo}
+                        <#include "posts/photo.html">
+                        {/block:Photo}
 
-							{block:Photoset}
-                                <#include "posts/photoset.html">
-							{/block:Photoset}
+                        {block:Photoset}
+                        <#include "posts/photoset.html">
+                        {/block:Photoset}
 
-							{block:Quote}
-                                <#include "posts/quote.html">
-							{/block:Quote}
+                        {block:Quote}
+                        <#include "posts/quote.html">
+                        {/block:Quote}
 
-							{block:Link}
-                                <#include "posts/link.html">
-							{/block:Link}
+                        {block:Link}
+                        <#include "posts/link.html">
+                        {/block:Link}
 
-							{block:Chat}
-                                <#include "posts/chat.html">
-							{/block:Chat}
+                        {block:Chat}
+                        <#include "posts/chat.html">
+                        {/block:Chat}
 
-							{block:Audio}
-                                <#include "posts/audio.html">
-							{/block:Audio}
+                        {block:Audio}
+                        <#include "posts/audio.html">
+                        {/block:Audio}
 
-							{block:Video}
-                                <#include "posts/video.html">
-							{/block:Video}
+                        {block:Video}
+                        <#include "posts/video.html">
+                        {/block:Video}
 
-							{block:Answer}
-                                <#include "posts/answer.html">
-							{/block:Answer}
+                        {block:Answer}
+                        <#include "posts/answer.html">
+                        {/block:Answer}
 
-							{block:RebloggedFrom}
-                                <#include "reblogged.html">
-							{/block:RebloggedFrom}
+                        {block:RebloggedFrom}
+                        <#include "reblogged.html">
+                        {/block:RebloggedFrom}
 
-							{block:NotReblog}
-                                <#include "not_reblogged.html">
-							{/block:NotReblog}
+                        {block:NotReblog}
+                        <#include "not_reblogged.html">
+                        {/block:NotReblog}
 
-							{block:Date}
-                                <#include "panel.html">
-							{/block:Date}
+                        {block:Date}
+                        <#include "panel.html">
+                        {/block:Date}
 
-							{block:PermalinkPage}
-                                <#include "permalink.html">
-							{/block:PermalinkPage}
-						</section>
-					</div>
-				</article>
-			{/block:Posts}
-		</section>
-	</div>
+                        {block:PermalinkPage}
+                        <#include "permalink.html">
+                        {/block:PermalinkPage}
+                    </section>
+                </div>
+            </article>
+            {/block:Posts}
+        </section>
+    </div>
 </div>
