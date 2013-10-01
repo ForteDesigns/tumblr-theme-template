@@ -5,7 +5,7 @@ Stay orginized and create great themes.
 ### Requirements
 
 * [LESS - Leaner CSS](https://npmjs.org/package/less)
-* [GPP - Generic Preprocessor ](en.nothingisreal.com/wiki/GPP)
+* [GPP - Generic Preprocessor ](http://en.nothingisreal.com/wiki/GPP)
 
 ### Downloading
 
